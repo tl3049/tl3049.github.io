@@ -23,5 +23,5 @@ REM Assumes your primary branch is 'main'. If not, change to 'master'.
 git push origin main
 
 ECHO " "
-ECHO "✅ Done! Your website will be updated in a few minutes."
+ECHO "Done! Your website will be updated in a few minutes."
 
