@@ -71,8 +71,9 @@ a {
 a:focus,
 a:hover {
   color: #f09228;
-  text-decoration: none;
+  text-decoration: underline;
 }
+
 
 body,
 td,
