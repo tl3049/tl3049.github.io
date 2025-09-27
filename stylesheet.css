@@ -69,9 +69,15 @@ a {
 }
 
 a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: underline;
+/* 这是链接的默认样式 */
+a.nav-link {
+  color: #333; /* 设置链接文字颜色为深灰色 */
+  text-decoration: none; /* 移除默认的下划线 */
+}
+
+/* 这是鼠标悬停在链接上时的样式 */
+a.nav-link:hover {
+  text-decoration: underline; /* 添加下划线 */
 }
 
 
