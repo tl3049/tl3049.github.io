@@ -42,25 +42,47 @@
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
 
-                            <!-- 研究方向 1 -->
-                           <!-- 研究方向 1 -->
+                            <!-- Research Area 1 -->
                             <tr>
                                 <td style="padding:20px;width:100%;vertical-align:middle">
-                                    <h3>Distributed Optimization</h3>
-                                    <table style="width:100%;border:0px;">
+                                    <h3>Robust Distributed Optimization</h3>
+                                    <table style="width:100%;border:0;">
                                         <tr>
-                                            <td style="width:50%;padding-right:20px;vertical-align: top;">
-                                                <!-- 使用 figure 和 figcaption 组合图片和标题 -->
+                                            <!-- Left: Figure -->
+                                            <td style="width:50%;padding-right:20px;vertical-align:top;">
                                                 <figure style="margin:0;">
-                                                    <img src="images/disOpt.gif" alt="Distributed Optimization Image" style="width:100%; border-radius:10px;">
-                                                    <figcaption style="text-align:center;font-style:italic;margin-top:5px;">
-                                                        Convergence errors of all the computing units
+                                                    <img src="images/disOpt.gif"
+                                                        alt="Convergence errors of distributed optimization under parameter variations and disturbances"
+                                                        style="width:100%;border-radius:10px;">
+                                                    <figcaption
+                                                        style="text-align:center;font-style:italic;margin-top:5px;">
+                                                        Convergence errors across all computing nodes under parameter
+                                                        variations and external disturbances.
                                                     </figcaption>
                                                 </figure>
                                             </td>
-                                            <td style="width:50%;vertical-align: top;">
+
+                                            <!-- Right: Text -->
+                                            <td style="width:50%;vertical-align:top;">
                                                 <p>
-                                                    在这里写下关于“分布式优化”研究方向的详细介绍。您可以描述您在这个领域解决的核心问题、使用的方法以及取得的成果。
+                                                    Distributed optimization enables a network of agents to solve a
+                                                    global objective using only local data and
+                                                    neighbor-to-neighbor communication. A representative case is
+                                                    <strong>federated learning</strong>, where each
+                                                    agent retains its own dataset while jointly training a global model
+                                                    that minimizes the aggregate loss.
+                                                </p>
+                                                <p>
+                                                    My work develops <strong>robust</strong> algorithms that provably
+                                                    converge despite complex agent dynamics,
+                                                    parametric uncertainties, and exogenous disturbances. We co-design the
+                                                    optimizer and controller—leveraging
+                                                    <em>extremum seeking</em>, <em>adaptive dynamic programming</em>,
+                                                    and <em>reinforcement learning</em>—and
+                                                    certify stability and performance using the <em>small-gain
+                                                        theorem</em> and <em>singular-perturbation
+                                                        theory</em>. Applications include distributed computation, sensor networks, robotic
+                                                    swarms, and smart grids.
                                                 </p>
                                             </td>
                                         </tr>
