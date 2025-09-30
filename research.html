@@ -265,23 +265,25 @@
 
                                             <!-- Right: Text -->
                                             <td style="width:50%;vertical-align:top;">
+                                                <p> As line conditions grow more complex, 
+                                                    classical optimal control struggles to compute energy-optimal 
+                                                    train speed profiles. 
+                                                    Dynamic programming can handle this numerically, 
+                                                    but the standard approach suffers from the <em> curse of 
+                                                    dimensionality </em>. To address this, I develop <strong> reinforcement learning </strong> 
+                                                    methods that efficiently approximate the optimal operating profile. 
+                                                </p> 
                                                 <p>
-                                                     在这里写下关于“强化学习在节能火车运营中的应用”研究方向的详细介绍。可以包括问题的建模、算法设计和实验结果。
-                                                </p>
-                                                <p>
-                                                    My work develops <strong>robust</strong> algorithms that provably
-                                                    converge despite complex agent dynamics,
-                                                    parametric uncertainties, and exogenous disturbances. We co-design
-                                                    the
-                                                    optimizer and controller—leveraging <em>output regulation</em>,
-                                                    <em>extremum seeking</em>,
-                                                    and <em>reinforcement learning</em>—and
-                                                    certify stability and performance using the <em>small-gain
-                                                        theorem</em> and <em>singular perturbation
-                                                        theory</em>. Applications include distributed computation,
-                                                    sensor networks, robotic
-                                                    swarms, and smart grids.
-                                                </p>
+                                                    Concretely, I use three complementary <em> approximators </em> for value functions: a rollout 
+                                                    estimation, an interpolation-based  
+                                                    approximation, and a neural-network approximation. 
+                                                    These learners can closely match solutions from the classical maximum 
+                                                    principle. To make the comparison, I resolve 
+                                                    an open question 
+                                                    by proving the <strong> uniqueness </strong> of the optimal trajectory 
+                                                    under <em>speed limit</em>  constraints (see left figure). 
+                                                    The framework yields <em> energy-efficient  </em>driving  stratefies in both single-train and multi-train operations 
+                                                    when exploiting <em> regenerative energy </em>. </p>
                                             </td>
                                         </tr>
                                     </table>
