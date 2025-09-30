@@ -99,21 +99,38 @@
                                 </td>
                             </tr>
 
-                            <!-- 研究方向 2 -->
                             <tr>
                                 <td style="padding:20px;width:100%;vertical-align:middle">
                                     <h3>Traffic Signal Optimization</h3>
 
                                     <!-- 上方图片容器 -->
+                                    <!-- 改动：移除了 justify-content:space-between; 因为 gap 已经能很好地处理间距 -->
                                     <div
-                                        style="width:100%; margin-bottom:20px; display:flex; justify-content:space-between; gap:20px;">
-                                        <!-- 第一张图片 -->
-                                        <img src="images/sumo.gif" alt="SUMO simulation using proposed MPC controllers"
-                                            style="width:calc(50% - 10px); border-radius:10px; object-fit: cover;">
+                                        style="width:100%; margin-bottom:20px; display:flex; gap:20px; align-items: flex-start;">
 
-                                        <!-- 第二张图片 -->
-                                        <img src="images/performance.png" alt="Quene length comparison"
-                                            style="width:calc(50% - 10px); border-radius:10px; object-fit: cover;">
+                                        <!-- 第一个图片带标题 (GIF, 60%宽度) -->
+                                        <!-- 改动：使用 figure 标签来包裹图片和标题 -->
+                                        <figure style="width:60%; margin:0;">
+                                            <img src="images/sumo.gif"
+                                                alt="SUMO simulation using proposed MPC controllers"
+                                                style="width:100%; border-radius:10px; object-fit: cover; display: block;">
+                                            <!-- 改动：添加 figcaption 来显示可见的图片标题 -->
+                                            <figcaption
+                                                style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
+                                                SUMO simulation using proposed MPC controllers
+                                            </figcaption>
+                                        </figure>
+
+                                        <!-- 第二个图片带标题 (PNG, 40%宽度) -->
+                                        <figure style="width:40%; margin:0;">
+                                            <img src="images/performance.png" alt="Quene length comparison"
+                                                style="width:100%; border-radius:10px; object-fit: cover; display: block;">
+                                            <!-- 改动：添加 figcaption 来显示可见的图片标题 -->
+                                            <figcaption
+                                                style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
+                                                Queue length comparison
+                                            </figcaption>
+                                        </figure>
                                     </div>
 
                                     <!--下方文字描述 -->
