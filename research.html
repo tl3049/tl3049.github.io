@@ -134,33 +134,17 @@
                                     <!--下方文字描述 -->
                                     <div>
                                         <p>
-                                            This research focuses on optimizing traffic signal timings to improve urban
-                                            traffic flow and reduce congestion.
-                                            The salient features of this work is that modeling and control are purely
-                                            data-driven, that means, we rely on the
-                                            data collected from traffic sensors to learn the traffic dynamics and
-                                            optimize the signal timings. To model the traffic dynamics,
-                                            we employ machine learning algorithms including linear regreesion,
-                                            multi-layer perceptor and deep neural networks to capture the complex
-                                            interactions between traffic signals and vehicle flows.
-                                            The data is also used to build and calibrate a simulation environment for 42
-                                            intersections using SUMO (Simulation of Urban MObility), which allows us to
-                                            gnerarate synthetic traffic scenarios, test and validate our optimization
-                                            algorithms in a realistic setting.
-                                            Moreover, the data is used in a model predictive control (MPC) framework to
-                                            optimize the traffic signal timings in real-time. We also streamline
-                                            the data processing and optimization algorithms to ensure that the
-                                            optimization can be performed within the time constraints of real-world
-                                            traffic signal systems.
-                                            These streamline allows us to integrate linear quadratic regulator, gain
-                                            scheduling, and reinforcement learning algorithm to enhance the performance
-                                            and robustness of the traffic signal control system.
-                                            The above figures show the SUMO simulation using the proposed MPC
-                                            controllers and the queue length comparison between the proposed method and
-                                            the baseline methods using the standard actuated controller.
-                                            Deployed the pipeline across 24 intersections with computer vision sensors,
-                                            reducing travel time by 19.4% and
-                                            vehicle queue length by 15.6% in field experiments
+                                            Urban traffic signals are often fixed or heuristically actuated, and they struggle to handle uncertain, time-varying 
+                                            demand under tight latency constraints. I use a <strong>data-driven</strong>  approach that learns traffic dynamics from 
+                                            sensor data and optimizes signal timings in real time via various data-based control strategies. 
+                                            I built and calibrated a 42-intersection SUMO (Simulation of Urban Mobility) model from field data; learned 
+                                            the traffic flow dynamics with linear regression, multi-layer perceptrons, and deep neural networks; engineered 
+                                            a streamlined ETL and optimization stack to meet real-time constraints. 
+                                            The pipeline integrated LQR, gain scheduling, reinforcement learning, and MPC controller for performance validation and improvement.
+                                            Deployed 
+                                            across 24 intersections with computer-vision sensors, the pipeline reduced average travel time by 19.4% and 
+                                            vehicle queue lengths by 15.6% in field experiments. The figures above illustrate the SUMO experiments under 
+                                            the proposed MPC controllers and the queue-length comparison against the standard actuated NEMA signal controllers.
                                             </thead>
                                         </p>
                                     </div>
