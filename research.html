@@ -107,13 +107,15 @@
                                     <table style="width:100%;border:0px;">
                                         <tr>
                                             <!-- 左列：图片 -->
-                                            <td style="width:30%; padding-right:20px; vertical-align:top;">
+                                            <!-- 改动：宽度从30%增加到40%，让图片更大 -->
+                                            <td style="width:40%; padding-right:20px; vertical-align:top;">
                                                 <img src="images/performance.png" alt="Performance comparison"
                                                     style="width:100%; border-radius:10px;">
                                             </td>
 
                                             <!-- 右列：文字描述 -->
-                                            <td style="width:70%; vertical-align:top;">
+                                            <!-- 改动：宽度从70%减小到60% -->
+                                            <td style="width:60%; vertical-align:top;">
                                                 <p>
                                                     Urban traffic signals are often fixed or heuristically actuated, and
                                                     they struggle to handle uncertain, time-varying
@@ -122,12 +124,14 @@
                                                     from
                                                     sensor data and optimizes signal timings in real time via various
                                                     data-based control strategies.
-                                                    I built and calibrated a 42-intersection SUMO (“<a
-                                                        href="https://eclipse.dev/sumo/" target="_blank"> Simulation of
-                                                        Urban Mobility</a>) model from field data; learned
+                                                    <!-- 改动：为超链接添加 style="color:inherit;" 使其不再是蓝色 -->
+                                                    I built and calibrated a 42-intersection <a
+                                                        href="https://eclipse.dev/sumo/" target="_blank"
+                                                        style="color:inherit;">SUMO</a>(“Simulation of Urban Mobility”)
+                                                    model from field data; learned
                                                     the traffic flow dynamics with <em> linear regression, multi-layer
                                                         perceptrons, and deep neural networks </em>; engineered
-                                                    a streamlined ETL and optimization stack to meet real-time
+                                                    a optimization pipeline to meet real-time
                                                     constraints.
                                                     The pipeline integrated <em> linear quadratic regulator, gain
                                                         scheduling, reinforcement learning, and model predictive control
