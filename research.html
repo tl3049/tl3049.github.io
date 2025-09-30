@@ -124,16 +124,16 @@
                 <td style="width:50%; vertical-align:top;">
                     <p>
                         Urban traffic signals are often fixed or heuristically actuated, and they struggle to handle uncertain, time-varying 
-                        demand under tight latency constraints. I use a <strong>data-driven</strong> approach that learns traffic dynamics from 
+                        demand. I use a <strong>data-driven</strong> approach that learns traffic dynamics from 
                         sensor data and optimizes signal timings in real time via various data-based control strategies. 
                         <!-- 改动：为超链接添加 style="color:inherit;" 使其不再是蓝色 -->
-                        I built and calibrated a 42-intersection <a href="https://eclipse.dev/sumo/" target="_blank" style="color:inherit;">SUMO (Simulation of Urban Mobility)</a> model from field data; learned 
+                        I built and calibrated a 42-intersection <a href="https://eclipse.dev/sumo/" target="_blank" style="color:inherit;">SUMO</a> model from field data; learned 
                         the traffic flow dynamics with <em> linear regression, multi-layer perceptrons, and deep neural networks </em>; engineered 
-                        a optimization pipeline to meet real-time constraints, integrating <em> linear quadratic regulator, gain scheduling, reinforcement learning, and model predictive control (MPC) </em>.
+                        an optimization pipeline to meet real-time constraints, integrating <em> linear quadratic regulator, gain scheduling, reinforcement learning, and model predictive control (MPC) </em>.
                     </p>
                     <p> Deployed across 24 intersections with computer-vision sensors, the pipeline reduced average travel time by 19.4% and 
                         vehicle queue lengths by 15.6% in <strong>field experiments</strong>. The figures left illustrate the queue-length comparison between the proposed
-                        MPC controller and  the standard actuated NEMA signal controller in the SUMO experiments.
+                        MPC controller and  the standard <a href="https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter4.htm" target="_blank" style="color:inherit;">NEMA</a>  controller.
                     </p>
                 </td>
             </tr>
