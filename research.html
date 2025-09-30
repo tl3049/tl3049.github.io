@@ -184,8 +184,9 @@
 
                                         <!-- 第一个图片带标题 -->
                                         <figure style="width:50%; margin:0;">
+                                            <!-- 改动：更新了图片和标题，同时保留对齐样式 -->
                                             <img src="images/ringroad.jpg" alt="Mixed traffic on a ring road"
-                                                style="width:100%; border-radius:10px; display: block;">
+                                                style="width:100%; height:220px; object-fit:contain; border-radius:10px; display: block;">
                                             <figcaption
                                                 style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
                                                 Mixed traffic on a ring road
@@ -194,8 +195,9 @@
 
                                         <!-- 第二个图片带标题 -->
                                         <figure style="width:50%; margin:0;">
+                                            <!-- 改动：更新了图片和标题，同时保留对齐样式 -->
                                             <img src="images/converg.png" alt="Convergence of controller parameters"
-                                                style="width:100%; border-radius:10px; display: block;">
+                                                style="width:100%; height:220px; object-fit:contain; border-radius:10px; display: block;">
                                             <figcaption
                                                 style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
                                                 Convergence of controller parameters
@@ -206,17 +208,26 @@
                                     <!--下方文字描述 -->
                                     <div>
                                         <p>
-                                            In mixed traffic, the parameters of human-driven vehicles (HDVs) are unknown and unmeasurable, 
-                                            making it difficult to regulate the overall platoon speed and alleviate congestion on freeways and ring roads.
-                                            I developed a unified <strong>reinforcement learning</strong> approach that learns directly from vehicle 
-                                            input–output data 
-                                            and uses connected and autonomous vehicles (CAVs) to regulate the speed of the entire platoon in both settings. 
-                                            I first analyzed the stabilizability of mixed CAV–HDV strings for ring-road and freeway topologies, 
-                                            then—relying only on driving data and <strong>no</strong> model-parameter knowledge—designed RL controllers that 
-                                            (i) stabilize the system and (ii) attenuate external disturbances, 
-                                            with provable <em> convergence </em> of the optimal controller/parameters. 
-                                            The method improves platoon-level speed regulation and congestion mitigation; 
-                                            the figures above show a ring-road experiment (left) and the convergence of the learned 
+                                            In mixed traffic, the parameters of human-driven vehicles (HDVs) are unknown
+                                            and unmeasurable,
+                                            making it difficult to regulate the overall platoon speed and alleviate
+                                            congestion on freeways and ring roads.
+                                            I developed a unified <strong>reinforcement learning</strong> approach that
+                                            learns directly from vehicle
+                                            input–output data
+                                            and uses connected and autonomous vehicles (CAVs) to regulate the speed of
+                                            the entire platoon in both settings.
+                                            I first analyzed the stabilizability of mixed CAV–HDV strings for ring-road
+                                            and freeway topologies,
+                                            then—relying only on driving data and <strong>no</strong> model-parameter
+                                            knowledge—designed RL controllers that
+                                            (i) <em> stabilize </em> the system and (ii) <em> attenuate </em> external
+                                            disturbances,
+                                            with provable <em> convergence </em> of the optimal controller/parameters.
+                                            The method improves platoon-level speed regulation and congestion
+                                            mitigation;
+                                            the figures above show a ring-road experiment (left) and the convergence of
+                                            the learned
                                             parameters during training (right).
                                         </p>
                                     </div>
