@@ -105,16 +105,15 @@
 
                                     <!-- 上方图片容器 -->
                                     <!-- 改动：移除了 justify-content:space-between; 因为 gap 已经能很好地处理间距 -->
+                                    <!-- 改动：将 align-items 从 flex-start 改为 flex-end 来实现底部对齐 -->
                                     <div
-                                        style="width:100%; margin-bottom:20px; display:flex; gap:20px; align-items: flex-start;">
+                                        style="width:100%; margin-bottom:20px; display:flex; gap:20px; align-items: flex-end;">
 
                                         <!-- 第一个图片带标题 (GIF, 60%宽度) -->
-                                        <!-- 改动：使用 figure 标签来包裹图片和标题 -->
                                         <figure style="width:60%; margin:0;">
                                             <img src="images/sumo.gif"
                                                 alt="SUMO simulation using proposed MPC controllers"
                                                 style="width:100%; border-radius:10px; object-fit: cover; display: block;">
-                                            <!-- 改动：添加 figcaption 来显示可见的图片标题 -->
                                             <figcaption
                                                 style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
                                                 SUMO simulation using proposed MPC controllers
@@ -125,10 +124,9 @@
                                         <figure style="width:40%; margin:0;">
                                             <img src="images/performance.png" alt="Quene length comparison"
                                                 style="width:100%; border-radius:10px; object-fit: cover; display: block;">
-                                            <!-- 改动：添加 figcaption 来显示可见的图片标题 -->
                                             <figcaption
                                                 style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
-                                                Queue length comparison
+                                                Performance comparison
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -136,7 +134,34 @@
                                     <!--下方文字描述 -->
                                     <div>
                                         <p>
-                                            在这里写下关于“交通信号优化”研究方向的详细介绍。您可以介绍项目的背景、挑战、您的创新解决方案以及相关的论文或代码链接。这段文字现在会显示在上面两张图片的下方。
+                                            This research focuses on optimizing traffic signal timings to improve urban
+                                            traffic flow and reduce congestion.
+                                            The salient features of this work is that modeling and control are purely
+                                            data-driven, that means, we rely on the
+                                            data collected from traffic sensors to learn the traffic dynamics and
+                                            optimize the signal timings. To model the traffic dynamics,
+                                            we employ machine learning algorithms including linear regreesion,
+                                            multi-layer perceptor and deep neural networks to capture the complex
+                                            interactions between traffic signals and vehicle flows.
+                                            The data is also used to build and calibrate a simulation environment for 42
+                                            intersections using SUMO (Simulation of Urban MObility), which allows us to
+                                            gnerarate synthetic traffic scenarios, test and validate our optimization
+                                            algorithms in a realistic setting.
+                                            Moreover, the data is used in a model predictive control (MPC) framework to
+                                            optimize the traffic signal timings in real-time. We also streamline
+                                            the data processing and optimization algorithms to ensure that the
+                                            optimization can be performed within the time constraints of real-world
+                                            traffic signal systems.
+                                            These streamline allows us to integrate linear quadratic regulator, gain
+                                            scheduling, and reinforcement learning algorithm to enhance the performance
+                                            and robustness of the traffic signal control system.
+                                            The above figures show the SUMO simulation using the proposed MPC
+                                            controllers and the queue length comparison between the proposed method and
+                                            the baseline methods using the standard actuated controller.
+                                            Deployed the pipeline across 24 intersections with computer vision sensors,
+                                            reducing travel time by 19.4% and
+                                            vehicle queue length by 15.6% in field experiments
+                                            </thead>
                                         </p>
                                     </div>
 
