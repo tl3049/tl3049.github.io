@@ -99,48 +99,71 @@
                                 </td>
                             </tr>
 
-<tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-        <h3>Traffic Signal Optimization</h3>
+                            <tr>
+                                <td style="padding:20px;width:100%;vertical-align:middle">
+                                    <h3>Traffic Signal Optimization</h3>
 
-        <!-- 使用一个新的表格来创建左图右文的两列布局 -->
-        <table style="width:100%;border:0px;">
-            <tr>
-                <!-- 左列：图片 -->
-                <td style="width:50%; padding-right:20px; vertical-align:middle;">
-                    <!-- 改动：重新添加 figure 和 figcaption 来显示标题 -->
-                    <figure style="margin:0;">
-                        <img src="images/performance.png" 
-                             alt="Performance comparison"
-                             style="width:100%; border-radius:10px; display: block;">
-                        <figcaption style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
-                            Performance comparison
-                        </figcaption>
-                    </figure>
-                </td>
+                                    <!-- 使用一个新的表格来创建左图右文的两列布局 -->
+                                    <table style="width:100%;border:0px;">
+                                        <tr>
+                                            <!-- 左列：图片 -->
+                                            <td style="width:50%; padding-right:20px; vertical-align:middle;">
+                                                <!-- 改动：重新添加 figure 和 figcaption 来显示标题 -->
+                                                <figure style="margin:0;">
+                                                    <img src="images/performance.png" alt="Performance comparison"
+                                                        style="width:100%; border-radius:10px; display: block;">
+                                                    <figcaption
+                                                        style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
+                                                        Performance comparison
+                                                    </figcaption>
+                                                </figure>
+                                            </td>
 
-                <!-- 右列：文字描述 -->
-                <!-- 改动：宽度从70%减小到60% -->
-                <td style="width:50%; vertical-align:middle;">
-                    <p>
-                        Urban traffic signals are often fixed or heuristically actuated, and they struggle to handle uncertain, time-varying 
-                        demand. I use a <strong>data-driven</strong> approach that learns traffic dynamics from 
-                        sensor data and optimizes signal timings in real time via various data-based control strategies. 
-                        <!-- 改动：为超链接添加 style="color:inherit;" 使其不再是蓝色 -->
-                        I built and calibrated a 42-intersection <a href="https://eclipse.dev/sumo/" target="_blank" style="color:inherit; text-decoration:underline;">SUMO</a> model from field data; learned 
-                        the traffic flow dynamics with <em> linear regression, multi-layer perceptrons, and deep neural networks </em>; engineered 
-                        an optimization pipeline to meet real-time constraints, integrating <em> linear quadratic regulator, gain scheduling, reinforcement learning, and model predictive control (MPC) </em>.
-                    </p>
-                    <p> Deployed across 24 intersections with computer-vision sensors, the pipeline reduced average travel time by 19.4% and 
-                        vehicle queue lengths by 15.6% in <strong>field experiments</strong>. The figures left illustrate the queue-length comparison between the proposed
-                        MPC controller and  the standard <a href="https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter4.htm" target="_blank" style="color:inherit; text-decoration:underline;">NEMA</a>  controller.
-                    </p>
-                </td>
-            </tr>
-        </table>
+                                            <!-- 右列：文字描述 -->
+                                            <!-- 改动：宽度从70%减小到60% -->
+                                            <td style="width:50%; vertical-align:middle;">
+                                                <p>
+                                                    Urban traffic signals are often fixed or heuristically actuated, and
+                                                    they struggle to handle uncertain, time-varying
+                                                    demand. I use a <strong>data-driven</strong> approach that learns
+                                                    traffic dynamics from
+                                                    sensor data and optimizes signal timings in real time via various
+                                                    data-based control strategies.
+                                                    <!-- 改动：为超链接添加 style="color:inherit;" 使其不再是蓝色 -->
+                                                    I built and calibrated a 42-intersection <a
+                                                        href="https://eclipse.dev/sumo/" target="_blank"
+                                                        style="color:inherit; text-decoration:underline;">SUMO</a> model
+                                                    from field data; learned
+                                                    the traffic flow dynamics with <em> linear regression, multi-layer
+                                                        perceptrons, and deep neural networks </em>; engineered
+                                                    an optimization pipeline to meet real-time constraints, integrating
+                                                    <em> linear quadratic regulator, gain scheduling, reinforcement
+                                                        learning, and model predictive control (MPC) </em>.
+                                                </p>
+                                                <p> Deployed across 24 intersections with computer-vision sensors, the
+                                                    pipeline reduced average travel time by 19.4% and
+                                                    vehicle queue lengths by 15.6% in <strong>field
+                                                        experiments</strong>. The figures left illustrate the
+                                                    queue-length comparison between the proposed
+                                                    MPC controller and the standard <a
+                                                        href="https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter4.htm"
+                                                        target="_blank"
+                                                        style="color:inherit; text-decoration:underline;">NEMA</a>
+                                                    controller.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-    </td>
-</tr>
+                                </td>
+                            </tr>
+
+                            <!-- 分割线 -->
+                            <tr>
+                                <td style="padding:0px 20px;">
+                                    <hr style="border: 0; height: 1px; background: #ddd;">
+                                </td>
+                            </tr>
 
                             <!-- 分割线 -->
                             <tr>
@@ -152,22 +175,56 @@
                             <!-- 研究方向 3 -->
                             <tr>
                                 <td style="padding:20px;width:100%;vertical-align:middle">
+
+                                    <!-- 改动：将标题 H3 移回到顶部 -->
                                     <h3>Reinforcement Learning for Autonomous Driving</h3>
-                                    <table style="width:100%;border:0px;">
-                                        <tr>
-                                            <td style="width:30%;padding-right:20px;">
-                                                <img src="images/placeholder.png" alt="Autonomous Driving Image"
-                                                    style="width:100%; border-radius:10px;">
-                                            </td>
-                                            <td style="width:70%;">
-                                                <p>
-                                                    在这里写下关于“强化学习在自动驾驶中的应用”研究方向的详细介绍。可以侧重于您使用的RL算法、解决的具体驾驶场景等。
-                                                </p>
-                                            </td>
-                                        </tr>
-                                    </table>
+
+                                    <!-- 上方图片容器 -->
+                                    <div style="width:100%; margin-bottom:20px; display:flex; gap:20px;">
+
+                                        <!-- 第一个图片带标题 -->
+                                        <figure style="width:50%; margin:0;">
+                                            <img src="images/ringroad.jpg" alt="Mixed traffic on a ring road"
+                                                style="width:100%; border-radius:10px; display: block;">
+                                            <figcaption
+                                                style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
+                                                Mixed traffic on a ring road
+                                            </figcaption>
+                                        </figure>
+
+                                        <!-- 第二个图片带标题 -->
+                                        <figure style="width:50%; margin:0;">
+                                            <img src="images/converg.png" alt="Convergence of controller parameters"
+                                                style="width:100%; border-radius:10px; display: block;">
+                                            <figcaption
+                                                style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
+                                                Convergence of controller parameters
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <!--下方文字描述 -->
+                                    <div>
+                                        <p>
+                                            In mixed traffic, the parameters of human-driven vehicles (HDVs) are unknown and unmeasurable, 
+                                            making it difficult to regulate the overall platoon speed and alleviate congestion on freeways and ring roads.
+                                            I developed a unified <strong>reinforcement learning</strong> approach that learns directly from vehicle 
+                                            input–output data 
+                                            and uses connected and autonomous vehicles (CAVs) to regulate the speed of the entire platoon in both settings. 
+                                            I first analyzed the stabilizability of mixed CAV–HDV strings for ring-road and freeway topologies, 
+                                            then—relying only on driving data and <strong>no</strong> model-parameter knowledge—designed RL controllers that 
+                                            (i) stabilize the system and (ii) attenuate external disturbances, 
+                                            with provable <em> convergence </em> of the optimal controller/parameters. 
+                                            The method improves platoon-level speed regulation and congestion mitigation; 
+                                            the figures above show a ring-road experiment (left) and the convergence of the learned 
+                                            parameters during training (right).
+                                        </p>
+                                    </div>
+
                                 </td>
                             </tr>
+
+
 
                             <!-- 分割线 -->
                             <tr>
