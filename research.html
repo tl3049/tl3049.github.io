@@ -103,52 +103,47 @@
                                 <td style="padding:20px;width:100%;vertical-align:middle">
                                     <h3>Traffic Signal Optimization</h3>
 
-                                    <!-- 上方图片容器 -->
-                                    <!-- 改动：移除了 justify-content:space-between; 因为 gap 已经能很好地处理间距 -->
-                                    <!-- 改动：将 align-items 从 flex-start 改为 flex-end 来实现底部对齐 -->
-                                    <div
-                                        style="width:100%; margin-bottom:20px; display:flex; gap:20px; align-items: flex-end;">
+                                    <!-- 使用一个新的表格来创建左图右文的两列布局 -->
+                                    <table style="width:100%;border:0px;">
+                                        <tr>
+                                            <!-- 左列：图片 -->
+                                            <td style="width:30%; padding-right:20px; vertical-align:top;">
+                                                <img src="images/performance.png" alt="Performance comparison"
+                                                    style="width:100%; border-radius:10px;">
+                                            </td>
 
-                                        <!-- 第一个图片带标题 (GIF, 60%宽度) -->
-                                        <figure style="width:60%; margin:0;">
-                                            <img src="images/sumo.gif"
-                                                alt="SUMO simulation using proposed MPC controllers"
-                                                style="width:100%; border-radius:10px; object-fit: cover; display: block;">
-                                            <figcaption
-                                                style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
-                                                SUMO simulation using proposed MPC controllers
-                                            </figcaption>
-                                        </figure>
-
-                                        <!-- 第二个图片带标题 (PNG, 40%宽度) -->
-                                        <figure style="width:40%; margin:0;">
-                                            <img src="images/performance.png" alt="Quene length comparison"
-                                                style="width:100%; border-radius:10px; object-fit: cover; display: block;">
-                                            <figcaption
-                                                style="text-align:center; padding-top:8px; font-size:14px; color:#555;">
-                                                Performance comparison
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <!--下方文字描述 -->
-                                    <div>
-                                        <p>
-                                            Urban traffic signals are often fixed or heuristically actuated, and they struggle to handle uncertain, time-varying 
-                                            demand under tight latency constraints. I use a <strong>data-driven</strong>  approach that learns traffic dynamics from 
-                                            sensor data and optimizes signal timings in real time via various data-based control strategies. 
-                                            I built and calibrated a 42-intersection SUMO (Simulation of Urban Mobility) model from field data; learned 
-                                            the traffic flow dynamics with <em> linear regression, multi-layer perceptrons, and deep neural networks </em>; engineered 
-                                            a streamlined ETL and optimization stack to meet real-time constraints. 
-                                            The pipeline integrated <em> linear quadratic regulator, gain scheduling, reinforcement learning, and model predictive control (MPC) </em>
-                                            for performance validation and improvement. Deployed 
-                                            across 24 intersections with computer-vision sensors in <strong> field experiments </strong>, the pipeline reduced average travel time by 19.4% and 
-                                            vehicle queue lengths by 15.6% in field experiments. The figures above illustrate the SUMO experiments under 
-                                            the proposed MPC controllers and the queue-length comparison against the standard actuated 
-                                            NEMA signal controllers.
-                                            </thead>
-                                        </p>
-                                    </div>
+                                            <!-- 右列：文字描述 -->
+                                            <td style="width:70%; vertical-align:top;">
+                                                <p>
+                                                    Urban traffic signals are often fixed or heuristically actuated, and
+                                                    they struggle to handle uncertain, time-varying
+                                                    demand under tight latency constraints. I use a
+                                                    <strong>data-driven</strong> approach that learns traffic dynamics
+                                                    from
+                                                    sensor data and optimizes signal timings in real time via various
+                                                    data-based control strategies.
+                                                    I built and calibrated a 42-intersection SUMO (“<a
+                                                        href="https://eclipse.dev/sumo/" target="_blank"> Simulation of
+                                                        Urban Mobility</a>) model from field data; learned
+                                                    the traffic flow dynamics with <em> linear regression, multi-layer
+                                                        perceptrons, and deep neural networks </em>; engineered
+                                                    a streamlined ETL and optimization stack to meet real-time
+                                                    constraints.
+                                                    The pipeline integrated <em> linear quadratic regulator, gain
+                                                        scheduling, reinforcement learning, and model predictive control
+                                                        (MPC) </em>
+                                                    for performance validation and improvement. Deployed
+                                                    across 24 intersections with computer-vision sensors in <strong>
+                                                        field experiments </strong>, the pipeline reduced average travel
+                                                    time by 19.4% and
+                                                    vehicle queue lengths by 15.6% in field experiments. The figures
+                                                    left illustrate the queue-length comparison against the standard
+                                                    actuated
+                                                    NEMA signal controllers in the SUMO experiments.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
 
                                 </td>
                             </tr>
