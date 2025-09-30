@@ -138,13 +138,14 @@
                                             demand under tight latency constraints. I use a <strong>data-driven</strong>  approach that learns traffic dynamics from 
                                             sensor data and optimizes signal timings in real time via various data-based control strategies. 
                                             I built and calibrated a 42-intersection SUMO (Simulation of Urban Mobility) model from field data; learned 
-                                            the traffic flow dynamics with linear regression, multi-layer perceptrons, and deep neural networks; engineered 
+                                            the traffic flow dynamics with <em> linear regression, multi-layer perceptrons, and deep neural networks </em>; engineered 
                                             a streamlined ETL and optimization stack to meet real-time constraints. 
-                                            The pipeline integrated LQR, gain scheduling, reinforcement learning, and MPC controller for performance validation and improvement.
-                                            Deployed 
-                                            across 24 intersections with computer-vision sensors, the pipeline reduced average travel time by 19.4% and 
+                                            The pipeline integrated <em> linear quadratic regulator, gain scheduling, reinforcement learning, and model predictive control (MPC) </em>
+                                            for performance validation and improvement. Deployed 
+                                            across 24 intersections with computer-vision sensors in <strong> field experiments </strong>, the pipeline reduced average travel time by 19.4% and 
                                             vehicle queue lengths by 15.6% in field experiments. The figures above illustrate the SUMO experiments under 
-                                            the proposed MPC controllers and the queue-length comparison against the standard actuated NEMA signal controllers.
+                                            the proposed MPC controllers and the queue-length comparison against the standard actuated 
+                                            NEMA signal controllers.
                                             </thead>
                                         </p>
                                     </div>
