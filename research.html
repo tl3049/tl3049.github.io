@@ -296,10 +296,36 @@
 
                         </tbody>
                     </table>
+                    <!-- 页脚 -->
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:0px">
+                                    <br>
+                                    <p style="text-align:center;font-size:small;">
+                                        Last update on <span id="last-updated"></span> | Design and source code from <a
+                                            href="https://jonbarron.info/">Jon Barron</a>'s website
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </td>
             </tr>
         </tbody>
     </table>
+    <script>
+        // 显示当前页面的最后修改时间
+        const lastMod = new Date(document.lastModified);
+        document.getElementById('last-updated').textContent =
+            lastMod.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+    </script>
 </body>
 
 </html>
