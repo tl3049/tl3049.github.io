@@ -8,6 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    # !!! 关键改动在这里：为机器人添加写入权限 !!!
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,7 +25,7 @@ jobs:
           # 使用 sed 命令查找 id 为 "last-updated-date" 的 span 标签，并将日期填入
           sed -i 's|<span id="last-updated-date">.*</span>|<span id="last-updated-date">'"$LAST_UPDATED_DATE"'</span>|' index.html
 
-      # 步骤2：用内置脚本生成站点地图 (不再依赖任何第三方插件)
+      # 步骤2：用内置脚本生成站点地图
       - name: Generate sitemap with shell script
         run: |
           # 创建 sitemap.xml 文件并写入头部信息
