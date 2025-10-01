@@ -182,6 +182,7 @@
 
   <script>
     // 显示当前页面的最后修改时间
+    const lastMod = new Date(document.lastModified);
     document.getElementById('last-updated').textContent =
       lastMod.toLocaleDateString('en-US', {
         year: 'numeric',
