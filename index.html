@@ -183,6 +183,17 @@
         </td>
       </tr>
   </table>
+  <!-- 在你的HTML中添加 -->
+<p>最后更新: <span id="last-updated"></span></p>
+
 </body>
+
+
+
+<script>
+  // 显示当前页面的最后修改时间
+  document.getElementById('last-updated').textContent = 
+    document.lastModified;
+</script>
 
 </html>
