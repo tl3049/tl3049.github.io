@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tl3049.github.io/</loc>
-    <lastmod>2025-09-30</lastmod> <!-- 每次更新网站时，最好也更新这个日期 -->
-    <priority>1.0</priority>
+    <loc>https://tl3049.github.io/publications.html</loc>
+    <lastmod>2025-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://tl3049.github.io/index.html</loc>
+    <lastmod>2025-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://tl3049.github.io/research.html</loc>
+    <lastmod>2025-10-01</lastmod>
   </url>
 </urlset>
