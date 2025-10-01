@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 新增步骤：获取当前日期并更新 index.html
       - name: Update last updated date
@@ -22,13 +22,14 @@ jobs:
 
       # 原有步骤：生成站点地图
       - name: Generate sitemap
-        uses: cicirello/sitemap-generator-action@v1
+        # !!! 改动在这里：将版本号从 @v1 更新为更具体的 @v1.9.0 !!!
+        uses: cicirello/sitemap-generator-action@v1.9.0
         with:
           site_url: https://tl3049.github.io/
 
       # 修改步骤：提交 index.html 和 sitemap.xml 两个文件的更改
       - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: Auto-update site date and sitemap"
           # 将 index.html 添加到提交文件的列表中
