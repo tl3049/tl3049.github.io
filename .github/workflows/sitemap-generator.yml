@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # !!! 关键改动在这里：为机器人添加写入权限 !!!
     permissions:
       contents: write
 
@@ -59,7 +58,8 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: Auto-update site date and sitemap"
+          # !!! 关键改动在这里：在提交信息中加入 [skip ci] 标签 !!!
+          commit_message: "chore: Auto-update site date and sitemap [skip ci]"
           # 确保将 index.html 和 sitemap.xml 都包含在提交中
           file_pattern: sitemap.xml index.html
 
