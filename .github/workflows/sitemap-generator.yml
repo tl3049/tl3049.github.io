@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 新增步骤：获取当前日期并更新 index.html
+      # 步骤1：获取当前日期并更新 index.html
       - name: Update last updated date
         run: |
           # 设置时区为纽约时间，并获取格式化的日期
@@ -20,18 +20,20 @@ jobs:
           # 使用 sed 命令查找 id 为 "last-updated-date" 的 span 标签，并将日期填入
           sed -i 's|<span id="last-updated-date">.*</span>|<span id="last-updated-date">'"$LAST_UPDATED_DATE"'</span>|' index.html
 
-      # 原有步骤：生成站点地图
+      # 步骤2：生成站点地图 (使用新的、更可靠的插件)
       - name: Generate sitemap
-        # !!! 改动在这里：将版本号从 @v1 更新为更具体的 @v1.9.0 !!!
-        uses: cicirello/sitemap-generator-action@v1.9.0
+        # !!! 改动在这里：我们换了一个全新的插件 !!!
+        uses: peter-murray/sitemap-generator-action@v4
         with:
-          site_url: https://tl3049.github.io/
+          # 这个插件会自动扫描您的仓库来生成 sitemap.xml
+          # 它会自动忽略 .github, .git 等文件夹
+          search_path: ./
 
-      # 修改步骤：提交 index.html 和 sitemap.xml 两个文件的更改
+      # 步骤3：提交 index.html 和 sitemap.xml 两个文件的更改
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: Auto-update site date and sitemap"
-          # 将 index.html 添加到提交文件的列表中
+          # 确保将 index.html 和 sitemap.xml 都包含在提交中
           file_pattern: sitemap.xml index.html
 
