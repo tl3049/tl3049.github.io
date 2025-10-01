@@ -103,10 +103,24 @@
                   <h2>Research</h2>
                   <p>
                     My research focuses on distributed optimization and reinforcement learning for multi-agent systems
-                    with applications to transportation and robotics.
-                  </p>
-
-                </td>
+                    with applications to transportation and robotics. Throughout my research, all of the effective approaches are
+                    particular solutions to the above two questions.
+                    The first question is related to nearly every engineering subject, this is because
+                    we often break a complex system into smaller subsystems, each of which achieves a specific goal. This is the case, e.g.,
+                    to develop a user application, the front end handles user interactions and the back end manages data storage. 
+                    In distributed optimization, an optimizer reduces the overall loss and an aggregator ensures consensus among agents. 
+                    In reinforcement learning, an actor learns to improve the policy and a critic evaluates the policy. All of these
+                    topics are related to the first question. In what conditions, can this structure ensure the achievement of the overall goal?
+                    Generally speaking, the two modules should be weakly coupled, i.e., the change of one module does not significantly affect the other module.
+                    This idea is related to the concept of the small-gain theorem and time-scale separation in systems theory, which I have applied to robust distributed optimization
+                    of complex networks. The result is surprsing: the achievement of the objective can be guaranteed for rather general 
+                    classes of uncertain systems subject to disturbances, as long as the appropriate modules are weakly coupled. Of course,
+                    the "weak coupling" condition is non-trivial, and right language should be used to described it. This is also a potential
+                    direction for future research in large language models (LLMs). As the training samples of LLMs are to be run out, how to continue
+                    to improve the performance of LLMs will be a challenging problem. To achieve this rather involved goal, self-learning can be
+                    a promising approach, but how to design the self-learning module and how to ensure the improvement of the overall performance
+                    are still open questions. The docompostion and weak-coupling ideas may provide some insights to this problem: RLHF is a typical example where
+                    the reward model and the policy model are weakly coupled, and the overall performance can be improved by smartly updating the two models.
               </tr>
             </tbody>
           </table>
