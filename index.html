@@ -169,7 +169,8 @@
                 <td style="padding:0px">
                   <br>
                   <p style="text-align:center;font-size:small;">
-                    Last update: <span id="last-updated"></span> | Design and source code from <a href="https://jonbarron.info/">Jon Barron</a>'s website
+                    Last update on <span id="last-updated"></span> | Design and source code from <a
+                      href="https://jonbarron.info/">Jon Barron</a>'s website
                   </p>
                 </td>
               </tr>
@@ -178,11 +179,15 @@
         </td>
       </tr>
   </table>
-  
+
   <script>
     // 显示当前页面的最后修改时间
     document.getElementById('last-updated').textContent =
-      document.lastModified;
+      lastMod.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
   </script>
 
 </body>
